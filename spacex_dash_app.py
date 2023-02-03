@@ -72,7 +72,7 @@ def get_pie_chart(site_dropdown):
               Input(component_id='payload_slider', component_property='value')])
 
 def update_scatter(site_dropdown, payload_slider):
-    low, high = slider_range
+    low, high = payload_slider
     mask = (spacex_df['Payload Mass (kg)'] > low) & (spacex_df['Payload Mass (kg)'] < high)
     if site_dropdown == 'All Sites' or None:
         fig = px.scatter(
